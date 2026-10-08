@@ -19,4 +19,7 @@
   document.querySelectorAll('[data-kiwify-checkout=""]').forEach(function(a){
     a.addEventListener('click', function(ev){ ev.preventDefault(); });
   });
+  // seletor de idioma: fecha ao clicar fora
+  var ls = document.querySelector('.langsw');
+  if (ls){ document.addEventListener('click', function(ev){ if (ls.open && !ls.contains(ev.target)) ls.open = false; }); }
 })();
