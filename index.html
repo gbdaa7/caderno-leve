@@ -1092,10 +1092,24 @@
       <p><strong>Aviso:</strong> os e-books Caderno Leve têm caráter educativo e de autocuidado. Eles não substituem
       acompanhamento de profissionais de saúde, psicologia, nutrição, finanças ou direito, e os resultados dependem de cada pessoa.</p>
       <p>Pagamento e entrega do PDF são feitos pela plataforma Kiwify.</p>
-      <p class="muted">© 2026 Caderno Leve. Todos os direitos reservados.</p>
+      <p class="muted">© 2026 Caderno Leve. Todos os direitos reservados. · <a href="privacidade/">Política de Privacidade</a></p>
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid','src'],S='cl_track',d={};
+  try{d=JSON.parse(sessionStorage.getItem(S)||'{}')||{};}catch(e){d={};}
+  try{var q=new URLSearchParams(location.search);K.forEach(function(k){var v=q.get(k);if(v)d[k]=v;});}catch(e){}
+  try{sessionStorage.setItem(S,JSON.stringify(d));}catch(e){}
+  var ks=Object.keys(d);if(!ks.length)return;
+  document.querySelectorAll("a[href*='pay.kiwify.com.br']").forEach(function(a){
+    try{var u=new URL(a.getAttribute('href'),location.href);
+      ks.forEach(function(k){u.searchParams.set(k,d[k]);});
+      a.setAttribute('href',u.toString());}catch(e){}
+  });
+})();
+</script>
 
 <script src="assets/site.js" defer></script>
 </body>

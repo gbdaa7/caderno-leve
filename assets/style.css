@@ -19,6 +19,7 @@ h3{font-size:1.05rem;font-weight:700}
 p{margin:0 0 1em}
 .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
 .narrow{max-width:780px}
+.legal h1{font-size:clamp(1.7rem,5.5vw,2.4rem)}.legal h2{margin-top:1.6em}.legal .muted{color:#6b6470}
 .muted{color:var(--muted)}
 .lead{font-size:1.06rem;color:#4A4752}
 /* topo */

@@ -114,10 +114,24 @@
     <div class="footer-legal">
       <p><strong>Avvertenza:</strong> gli e-book Caderno Leve hanno uno scopo informativo e di cura di sé. Non sostituiscono il supporto di professionisti della salute, della psicologia, della nutrizione, della finanza o del diritto, e i risultati variano da persona a persona.</p>
       <p>Il pagamento e la consegna del PDF sono gestiti dalla piattaforma Kiwify.</p>
-      <p class="muted">© 2026 Caderno Leve. Tutti i diritti riservati.</p>
+      <p class="muted">© 2026 Caderno Leve. Tutti i diritti riservati. · <a href="../../../it/privacy/">Informativa sulla privacy</a></p>
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var K=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid','src'],S='cl_track',d={};
+  try{d=JSON.parse(sessionStorage.getItem(S)||'{}')||{};}catch(e){d={};}
+  try{var q=new URLSearchParams(location.search);K.forEach(function(k){var v=q.get(k);if(v)d[k]=v;});}catch(e){}
+  try{sessionStorage.setItem(S,JSON.stringify(d));}catch(e){}
+  var ks=Object.keys(d);if(!ks.length)return;
+  document.querySelectorAll("a[href*='pay.kiwify.com.br']").forEach(function(a){
+    try{var u=new URL(a.getAttribute('href'),location.href);
+      ks.forEach(function(k){u.searchParams.set(k,d[k]);});
+      a.setAttribute('href',u.toString());}catch(e){}
+  });
+})();
+</script>
 
 <script src="../../../assets/site.js" defer></script>
 </body>
